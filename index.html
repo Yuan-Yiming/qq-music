@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QQ音乐</title>
+	<link rel="icon" href="images/head_icon.png">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="E:/front_end/jquery-1.12.4/jquery.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="icon"></div>
+		<ul class="login">
+			<li>登录</li>
+			<li>设置</li>
+		</ul>
+	</div>
+	<div class="content">
+		<div class="content-in">
+			<div class="content-left">
+				<div class="toolbar">
+					<ul>
+						<li><i></i>收藏</li>
+						<li><i></i>添加到歌单</li>
+						<li><i></i>下载</li>	
+						<li><i></i>删除</li>
+						<li><i></i>清空列表</li>
+					</ul>
+				</div>
+				<div class="music-list">
+					<ul>
+						<li class="list-head">
+							<div class="music-check"></div>
+							<div class="music-number"></div>
+							<div class="music-name">歌曲</div>
+							<div class="music-singer">歌手</div>
+							<div class="music-time">时长</div>
+						</li>
+						<li class="list-content">
+							<!-- <div class="handle-music"> -->
+							<span class="btn play-music" title="播放"></span>
+							<span class="btn add-music" title="添加到歌单"></span>
+							<span class="btn download-music" title="下载"></span>
+							<span class="btn share-music" title="分享"></span>
+							<span class="btn delete-music" title="删除"></span>
+							<!-- </div> -->
+							<div class="music-check"></div>
+							<div class="music-number"><span class="number">1</span><span class="wave"></span><span class="wave"></span><span class="wave"></span></div>
+							<div class="music-name">撒野</div>
+							<div class="music-singer"><span>凯瑟喵</span></div>
+							<div class="music-time">04:08</div>
+						</li>
+						<li class="list-content">
+							<span class="btn play-music" title="播放"></span>
+							<span class="btn add-music" title="添加到歌单"></span>
+							<span class="btn download-music" title="下载"></span>
+							<span class="btn share-music" title="分享"></span>
+							<span class="btn delete-music" title="删除"></span>
+							<div class="music-check"></div>
+							<div class="music-number"><span class="number">2</span><span class="wave"></span><span class="wave"></span><span class="wave"></span></div>
+							<div class="music-name">谎</div>
+							<div class="music-singer"><span>凯瑟喵</span></div>
+							<div class="music-time">05:40</div>
+						</li>
+						<li class="list-content">
+							<span class="btn play-music" title="播放"></span>
+							<span class="btn add-music" title="添加到歌单"></span>
+							<span class="btn download-music" title="下载"></span>
+							<span class="btn share-music" title="分享"></span>
+							<span class="btn delete-music" title="删除"></span>
+							<div class="music-check"></div>
+							<div class="music-number"><span class="number">3</span><span class="wave"></span><span class="wave"></span><span class="wave"></span></div>
+							<div class="music-name">白夜</div>
+							<div class="music-singer"><span>凯瑟喵</span></div>
+							<div class="music-time">04:24</div>
+						</li>
+						<li class="list-content">
+							<span class="btn play-music" title="播放"></span>
+							<span class="btn add-music" title="添加到歌单"></span>
+							<span class="btn download-music" title="下载"></span>
+							<span class="btn share-music" title="分享"></span>
+							<span class="btn delete-music" title="删除"></span>
+							<div class="music-check"></div>
+							<div class="music-number"><span class="number">4</span><span class="wave"></span><span class="wave"></span><span class="wave"></span></div>
+							<div class="music-name">越人歌</div>
+							<div class="music-singer"><span>凯瑟喵</span></div>
+							<div class="music-time">05:08</div>
+						</li>
+						<li class="list-content">
+							<span class="btn play-music" title="播放"></span>
+							<span class="btn add-music" title="添加到歌单"></span>
+							<span class="btn download-music" title="下载"></span>
+							<span class="btn share-music" title="分享"></span>
+							<span class="btn delete-music" title="删除"></span>
+							<div class="music-check"></div>
+							<div class="music-number"><span class="number">5</span><span class="wave"></span><span class="wave"></span><span class="wave"></span></div>
+							<div class="music-name">写给我第一个喜欢的女孩的歌</div>
+							<div class="music-singer"><span>凯瑟喵</span></div>
+							<div class="music-time">03:00</div>
+						</li>
+						<li class="list-content ready-to-play">
+							<span class="btn play-music" title="播放"></span>
+							<span class="btn add-music" title="添加到歌单"></span>
+							<span class="btn download-music" title="下载"></span>
+							<span class="btn share-music" title="分享"></span>
+							<span class="btn delete-music" title="删除"></span>
+							<div class="music-check"></div>
+							<div class="music-number"><span class="number">6</span><span class="wave"></span><span class="wave"></span><span class="wave"></span></div>
+							<div class="music-name">爱如探汤</div>
+							<div class="music-singer"><span>凯瑟喵</span></div>
+							<div class="music-time">03:42</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content-right">
+				<div class="music-cover">
+					<a href="javascript:;">
+						<span></span><span></span>
+					</a>
+				</div>
+				<div class="music-info">
+					<p>歌曲名：<span class="music-name">爱如探汤</span></p>
+					<p>歌手名：<span class="music-singer">凯瑟喵</span></p>
+					<p>专辑名：<span class="music-album">爱如探汤（《十年》同人曲）</span></p>
+				</div>
+				<div class="music-playing">
+					<p>谢你生来寻常</p>
+					<p>途经人海熙攘</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-in">
+			<div class="prev"></div>
+			<div class="play"></div>
+			<div class="next"></div>
+			<div class="progress-bar">
+				<span class="song-name"><span>爱如探汤</span> - <span>凯瑟喵</span></span>
+				<span class="song-time"><span>03:01</span> / <span>03:42</span></span>
+				<span class="full-line"></span>
+				<span class="half-line"></span>
+				<span class="dot"></span>
+			</div>
+			<div class="mode mode-in-order" title="循序播放"></div>
+			<div class="like"></div>
+			<div class="download"></div>
+			<div class="comments"></div>
+			<div class="clear-mode"></div>
+			<div class="voice"></div>
+			<div class="voice-bar">
+				<span class="full-line"></span>
+				<span class="half-line"></span>
+				<span class="dot"></span>
+			</div>
+		</div>
+	</div>
+	<div class="mask">
+		<!-- 样式类似 -->
+		<!-- <div class="mask"> -->
+		<div class="popup-login">
+			<div class="login-bar">
+				<a href="javascript:;" class="clicked">QQ登录</a>
+				<a href="javascript:;">微信登录</a>
+				<a href="javascript:;"></a>
+			</div>
+			<div class="qq-login">
+				<div class="QRcode-login">
+					<p class="login-title">快速安全登录</p>
+					<p>请使用<a href="#">QQ手机版</a>扫描二维码，</p>
+					<p>安全登录，防止盗号。</p>
+					<div>
+						<div class="qq-QRcode"></div>
+						<div class="scan"></div>
+					</div>
+					
+				</div>
+				<div class="account-login">
+					<p class="title">账号密码登录</p>
+					<p>推荐使用<a href="javascript:;" class="QRcode-login-link">快速安全登录</a>，防止盗号。</p>
+					
+					<div class="form-group">
+						<span class="clear-input"></span>
+						<input class="account input-box" type="text" name="account" placeholder="支持QQ号/邮箱/手机号登录">
+						<input class="password input-box" type="password" name="password" placeholder="密码">
+						<input class="submit" type="submit" name="submit" value="登录">
+					</div>
+				</div>
+				<div>
+					<ul class="login-bottom">
+						<li title="为了确保你的信息安全，不建议在网吧等公共环境勾选此项"><span class="check"></span>下次自动登录</li>
+						<li>
+							<ul>
+								<li><a href="javascript:;" class="account-login-link">账号密码登录</a><a class="forget-password" href="javascript:;" style="display: none;">忘记密码</a></li>
+								<li>|</li>
+								<li><a href="javascript:;">注册新账号</a></li>
+								<li>|</li>
+								<li><a href="javascript:;">意见反馈</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="wechat-login">
+				<div class="wechat-QRcode"></div>
+				<p>请使用微信扫描二维码登录</p>
+				<p>"QQ音乐"<br>QQ与微信帐号的音乐资产、付费特权不互通</p>
+			</div>
+		</div>
+		<div class="popup-setting">
+			<div class="setting-bar">
+				<p>播放器设置</p>
+				<a href="javascript:;"></a>
+			</div>
+			<div class="setting-content">
+				<p>历史播放列表</p>
+				<form class="history-playlist">
+					<input type="checkbox" name="keep" id="keep" checked="checked">
+					<label for="keep">保留（勾选后，每次新打开播放器，将保留上次关闭时的播放列表）</label>
+				</form>
+
+				<p>播放设置</p>
+				<form class="playing-setting">
+					<div class="play-immediately">
+						<input type="radio" name="playing-setting" id="play-imme" checked="checked">
+						<label for="play-imme">立即播放<span>(默认添加到播放队列最顶部)</span> </label>
+					</div>
+					<div class="add-to-listend">
+						<input type="radio" name="playing-setting" id="add-to-end">
+						<label for="add-to-end">添加到播放队列末尾</label>
+					</div>
+					<div class="play-next">
+						<input type="radio" name="playing-setting" id="play-next">
+						<label for="play-next">下一首播放</label>
+					</div>
+				</form>
+				<p>设置仅对当前电脑有效，清除Cookie后将恢复为默认设置。</p>
+			</div>
+			<div class="setting-btn">
+				<span><input type="submit" name="" value="确定"></span>
+				<span><input type="submit" name="" value="取消"></span>
+			</div>
+		</div>
+		<div class="popup-download">
+			<div class="download-bar"></div>
+			<div class="download-content"></div>
+		</div>
+		<!-- </div> -->
+		<!--  -->
+	</div>
+	<div class="popup-not-selected">
+		<span></span>
+		<p>请选择操作的单曲</p>
+	</div>
+	<!-- 样式类似 -->
+	<div class="popup-add"></div>
+	<div class="popup-share"></div>
+	
+</body>
+</html>

@@ -1,0 +1,1023 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	background: rgba(41,42,43,0.8);
+}
+
+/* 第一部分:上面导航栏区*/
+.header {
+	width: 100%;
+	height: 64px;
+	/*background-color: #333;*/
+	/*text-align: center;*/
+	line-height: 64px;
+	position: relative;
+}
+.header .icon {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	margin-top: -11.5px;
+	display: inline-block;
+	width: 78px;
+	height: 21px;
+	/*border: 1px solid blue;*/
+	background: url("images/icon.png") no-repeat ;
+	background-size: 100%;
+	opacity: 0.5;
+}
+.header .icon:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+.header ul {
+	float: right;
+	margin-right: 40px;
+}
+.header ul>li {
+	font-size: 14px;
+	color: #fff;
+	float: left;
+	margin-right: 20px;
+	opacity: 0.5;
+}
+.header ul>li:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+/*第二部分：中间内容区*/
+.content {
+	width: 100%;
+	height: 410px;
+	/*background-color: green;*/
+}
+.content .content-in {
+	width: 88%;
+	height: 100%;
+	margin: 0 auto;
+	/*background-color: pink;*/
+}
+.content .content-in .content-left {
+	float: left;
+	width: 72%;
+	height: 100%;
+	/*background-color: darkgreen;*/
+	/*opacity: 0.7;*/
+}
+.content .content-in .content-left .toolbar {
+	width: 100%;
+	height: 9.5%;
+	/*background-color: #333;*/
+}
+.content .content-in .content-left .toolbar ul {
+	/*width: 100%;*/
+	height: 100%;
+
+}
+.content .content-in .content-left .toolbar li {
+	float: left;
+	display: inline-block;
+	width: 125px;
+	height: 100%;
+	line-height: 37px;
+	border: 1px solid rgba(255,255,255,0.5);
+	box-sizing: border-box;
+	border-radius: 2px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 5px;
+}
+.content .content-in .content-left .toolbar li:hover {
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+.content .content-in .content-left .toolbar i {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(images/tools_icon1.png) no-repeat 0 0;
+	background-size: 202px 348px;
+	margin-right: 5px;
+	vertical-align: -5px;
+	opacity: 0.5;
+}
+.content .content-in .content-left .toolbar li:hover i {
+	opacity: 1;
+}
+.content .content-in .content-left .toolbar li:nth-child(1) i {
+	background-position: -60px -20px;
+}
+.content .content-in .content-left .toolbar li:nth-child(2) i {
+	background-position: -20px -20px;
+}
+.content .content-in .content-left .toolbar li:nth-child(3) i {
+	background-position: -40px -246px;
+}
+.content .content-in .content-left .toolbar li:nth-child(4) i {
+	background-position: -100px -20px;
+}
+.content .content-in .content-left .toolbar li:nth-child(5) i {
+	background-position: -40px -307px;
+}
+.content .content-in .content-left .music-list {
+	width: 100%;
+	height: 84%;
+	margin-top: 18px;
+	/*background-color: pink;*/
+}
+.content .content-in .content-left .music-list ul {
+	height: 100%;
+	width: 100%;
+}
+.content .content-in .content-left .music-list li {
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	/*background-color: #333;*/
+	color: rgba(255,255,255,0.8);
+	font-size: 14px;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	position: relative;
+	/*opacity: 0.3;*/
+	/*text-align: center;*/
+}
+.content .content-in .content-left .music-list li>div {
+	float: left;
+}
+.content .content-in .content-left .music-list li:first-child {
+	border-top: 1px solid rgba(255,255,255,0.1);
+} 
+.content .content-in .content-left .music-list li:hover {
+	/*opacity: 1;*/
+	background-color: 
+}
+.content .content-in .content-left .music-list .music-check {
+	width: 14px;
+	height: 14px;
+	border: 1px solid #fff;
+	margin-right: 25px;
+	margin-top: 17px;
+	opacity: 0.3;
+	/*background: url("images/tools_icon1.png");*/
+	background-size: 202px 348px;
+	background-position: -60.5px -83px;
+}
+.content .content-in .content-left .music-list .checked {
+	opacity: 1;
+	background-image: url('images/tools_icon1.png');
+}
+
+.content .content-in .content-left .music-list .music-check:hover {
+	opacity:1;
+}
+.content .content-in .content-left .music-list .music-number {
+	width: 2%;
+	height: 100%;
+	position: relative;
+	/*border: 1px solid red;*/
+	box-sizing: border-box;
+}
+
+/* 播放歌曲的音乐波浪 */
+.content .content-in .content-left .music-list .is-playing .music-number .number {
+	display: none;
+}
+.content .content-in .content-left .music-list .is-playing .music-number .wave {
+	/*position: absolute;*/
+	display: inline-block;
+	width: 2px;
+	height: 10px;
+	margin-right: 1.5px;
+	/*left: -6px;*/
+	/*bottom: 18px;*/
+	background-color: #fff;
+}
+@keyframes wave {
+	from {height: 2px;}
+	to {height: 10px;}
+}
+.content .content-in .content-left .music-list .music-number .wave:nth-child(4) {
+	animation: wave 0.3s  infinite alternate;
+}
+.content .content-in .content-left .music-list .music-number .wave:nth-child(2) {
+	animation: wave 0.3s 0.1s infinite alternate;
+}
+.content .content-in .content-left .music-list .music-number .wave:nth-child(3) {
+	animation: wave 0.3s 0.2s infinite alternate;
+}
+/* 音乐波浪样式结束 */
+
+
+.content .content-in .content-left .music-list .music-name {
+	width: 53%;
+	height: 100%;
+}
+.content .content-in .content-left .music-list .music-singer {
+	width: 25%;
+	height: 100%;
+}
+.content .content-in .content-left .music-list .music-singer span:hover {
+	color: rgba(255,255,255,1);
+	/*color: green;*/
+	cursor: pointer;
+}
+/*music button*/
+.content .content-in .content-left .music-list .list-content {
+	position: relative;
+}
+.content .content-in .content-left .music-list .btn {
+	display: none;
+	width: 40px;
+	height: 40px;
+	/*border: 1px solid green;*/
+	background: url("images/tools_icon2.png") no-repeat;
+	background-size: 220px 308px;
+	opacity: 0.5;
+	position: absolute;
+	top: 4px;
+}
+.content .content-in .content-left .music-list .btn:hover {
+	cursor: pointer;
+}
+
+/*.content .content-in .content-left .music-list .list-content:hover .music-time {
+	display: none;
+}*/
+/*.content .content-in .content-left .music-list .hover .btn {
+	display: block;
+}*/
+
+/* 歌单列表只有4中状态：normal，hover，is-playing，ready-to-play*/
+.content .content-in .content-left .music-list .hover .music-time,
+.content .content-in .content-left .music-list .ready-to-play .music-time,
+.content .content-in .content-left .music-list .is-playing .music-time
+ {
+	display: none;
+}
+.content .content-in .content-left .music-list .ready-to-play .btn,
+.content .content-in .content-left .music-list .is-playing .btn,
+.content .content-in .content-left .music-list .hover .btn {
+	display: block;
+}
+
+.content .content-in .content-left .music-list .is-playing .btn:nth-child(1) {
+	background-position: -132px -220px;
+}
+.content .content-in .content-left .music-list .btn:nth-child(1) {
+	background-position: -132px 0px;
+	left: 270px;
+}
+.content .content-in .content-left .music-list .btn:nth-child(2) {
+	background-position: -132px -88px;
+	left: 320px;
+}
+.content .content-in .content-left .music-list .btn:nth-child(3) {
+	background-position: -132px -132px;
+	left: 370px;
+}
+.content .content-in .content-left .music-list .btn:nth-child(4) {
+	background-position: -132px -44px;
+	left: 420px;
+}
+.content .content-in .content-left .music-list .btn:nth-child(5) {
+	background-position: -132px -176px;
+	left: 680px;
+}
+
+.content .content-in .content-left .music-list .btn:hover {
+	opacity: 1;
+}
+
+.content .content-in .content-right {
+	float: left;
+	width: 28%;
+	height: 100%;
+	/*background-color: orange;*/
+	font-size: 14px;
+}
+.content .content-in .content-right .music-cover {
+	width: 211px;
+	height: 186px;
+	/*border: 1px solid red;*/
+	margin-left: 63px;
+}
+.content .content-in .content-right .music-cover span:nth-child(1) {
+	display: inline-block;
+	width: 186px;
+	height: 186px;
+	background: url("images/song_airutantang.jpg") no-repeat 0 0;
+	background-size: 100%;
+}
+.content .content-in .content-right .music-cover span:nth-child(2) {
+	display: inline-block;
+	width: 25px;
+	height: 180px;
+	background: url("images/album.png") no-repeat -176px -6px;
+	background-size: 201px 180px;
+}
+.content .content-in .content-right .music-info {
+	width: 100%;
+	height: 90px;
+	line-height: 28px;
+	text-align: center;
+	margin: 10px 0 25px 0;
+	color: rgba(255,255,255,0.7);
+}
+
+.content .content-in .content-right .music-info span:hover {
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+
+.content .content-in .content-right .music-playing {
+	width: 100%;
+	height: 80px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+	opacity: 0.8;
+}
+
+
+/* 第三部分：下方音乐播放栏*/
+.footer {
+	width: 100%;
+	height: 100px;
+	/*background-color: #333;*/
+	position: fixed;
+	bottom: 0;
+}
+.footer .footer-in {
+	width: 88%;
+	height: 100%;
+	margin: 0 auto;
+	/*background-color: red;*/
+	position: relative;
+}
+.prev, .play, .next, .mode, .like, .download, .comments, .clear-mode, .voice, .dot {
+	position: absolute;
+	/*border: 1px solid red;*/
+	background: url("images/tools_icon3.png") no-repeat;
+	background-size: 132px 1000px;
+	opacity: 0.8;
+}
+.prev:hover, .play:hover, .next:hover, .mode:hover, .like:hover, .download:hover, .comments:hover, .clear-mode:hover, .voice:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+.prev, .play, .next, .mode, .like, .download, .comments, .voice {
+	width: 30px;
+}
+.clear-mode {
+	width: 74.8px;
+	right: 140px;
+	height: 26.4px;
+	top: 37px;
+	background-position: 0 -282px;
+}
+.clear-mode-on {
+	background-position: 0 -310.8px;
+}
+.prev {
+	width: 21px;
+	height: 21px;
+	top: 39.5px;
+	left: 0;
+	background-position: 0 -30px;
+}
+.next {
+	width: 21px;
+	height: 21px;
+	top: 39.5px;
+	left: 105.5px;
+	background-position: 0 -51px;
+}
+.play {
+	width: 23.6px;
+	height: 30px;
+	top: 35px;
+	left: 54px;
+	background-position: 0 0;
+}
+.playing {
+	width: 20px;
+	height: 25.8px;
+	top: 37.1px;
+	left: 54px;
+	background-position: -28px 0;
+}
+
+/* 播放模式，默认列表循环 */
+.mode {
+	width: 27px;
+	height: 26px;
+	top: 37px;
+	right: 390px;
+	background-position: 0 -231px;
+	/*border: 1px solid red;*/
+}
+.mode-in-order {
+	background-position: 0 -260px;
+	width: 23px;
+	height: 22px;
+	top: 39px;
+}
+.mode-random {
+	background-position: 0 -74px;
+	height: 20px;
+	top: 40px;
+}
+.mode-single-cycle {
+	/* mode */
+}
+.mode-list-cycle {
+	background-position: 0 -204px;
+}
+
+
+.like {
+	width: 23.2px;
+	height: 22.8px;
+	top: 38.6px;
+	right: 340px;
+	background-position: 0 -95.2px;
+}
+.download {
+	width: 22.4px;
+	height: 22.4px;
+	top: 38.8px;
+	right: 290px;
+	background-position: 0 -118.8px;
+}
+.comments {
+	width: 24px;
+	height: 26px;
+	top: 37px;
+	right: 240px;
+	background-position: 0 -428.4px;
+}
+.voice {
+	/*border: 1px solid red;*/
+	width: 24.6px;
+	height: 21.6px;
+	top: 39.2px;
+	right: 90px;
+	background-position: 0 -143px;
+}
+.silent {
+	background-position: 0 -181px;
+	width: 26px;
+	right: 88.6px;
+}
+/* 音乐播放进度条 & 音量进度条 */
+.progress-bar, .voice-bar {
+	position: absolute;
+	/*border: 1px solid red;*/
+	height: 30px;
+	top: 35px;
+}
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-position: 0 -170px; 
+	opacity: 1;
+	border: none;
+	cursor: pointer;
+}
+/* 音量条 */
+.voice-bar {
+	width: 80px;
+	right: 2px;
+}
+.voice-bar .full-line {
+	display: inline-block;
+	width: 80px;
+	/*border: 1px solid #fff;*/
+	height: 2px;
+	background-color: rgba(255,255,255,0.2);
+	position: absolute;
+	top: 14px;
+}
+.voice-bar .half-line {
+	display: inline-block;
+	width: 40px;
+	height: 2px;
+	/*border: 1px solid #fff;*/
+	background-color: rgb(255,255,255);
+	position: absolute;
+	top: 14px;
+	/*opacity: 0.5;*/
+}
+.voice-bar .dot {
+	top: 10px;
+	left: 40px;
+}
+/* 音乐播放进度条 */
+.progress-bar {
+	width: 460px;
+	left: 190px;
+}
+.progress-bar .full-line {
+	display: inline-block;
+	width: 460px;
+	/*border: 1px solid #fff;*/
+	height: 2px;
+	background-color: rgba(255,255,255,0.4);
+	position: absolute;
+	top: 30px;
+}
+.progress-bar .half-line {
+	display: inline-block;
+	width: 220px;
+	height: 2px;
+	/*border: 1px solid #fff;*/
+	background-color: rgb(255,255,255);
+	position: absolute;
+	top: 30px;
+	/*opacity: 0.5;*/
+}
+.progress-bar .dot {
+	top: 25px;
+	left: 220px;
+}
+
+.progress-bar .song-name, .progress-bar .song-time {
+	display: inline-block;
+	/*width: */
+	height: 16px;
+	position: absolute;
+	top: 5px;
+	font-size: 14px;
+	color: rgba(255,255,255,0.8);
+}
+
+.progress-bar .song-time {
+	right: 0;
+}
+.progress-bar .song-name span:hover {
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+
+
+
+
+
+/* 第4部分：弹出页面部分样式 */
+.mask {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+.mask>div {
+	position: absolute;
+}
+
+/* 4.1 弹出登陆界面 */
+.mask .popup-login {
+	display: none;
+	width: 560px;
+	height: 400px;
+	top: 95px;
+	left: 360px;
+	background-color: #fff;
+	border: 1px solid #cdcdcd;
+}
+/* 4.1.1 登陆界面的顶部选项栏 */
+.mask .popup-login .login-bar {
+	width: 100%;
+	height: 52px;
+	line-height: 52px;
+	position: relative;
+	/*background-color: red;*/
+	border-bottom: 1px solid #efefef;
+}
+.mask .popup-login .login-bar a {
+	color: #424242;
+}
+.mask .popup-login .login-bar a:hover,
+.mask .popup-login .login-bar a.clicked {
+	color: #31c27c;
+}
+
+.mask .popup-login .login-bar a:nth-child(1) {
+	float: left;
+	left: 20%;
+	margin-left: 28%;
+}
+.mask .popup-login .login-bar a:nth-child(2) {
+	float: right;
+	right: 20%;
+	margin-right: 28%;
+}
+.mask .popup-login .login-bar a:last-child {
+	position: absolute;
+	width: 11.5px;
+	height: 11.5px;
+	top: 15px;
+	right: 15px;
+	background: url("images/tools_icon6.png") no-repeat;
+	background-position: 0px -200px;/*-93px -162.5px;*/
+	background-size: 50px 290px;
+}
+.mask .popup-login .login-bar a:last-child:hover {
+	background-position: -14px -200px;/*-93px -162.5px;*/
+}
+/* 4.1.2 QQ登录页面 */
+.mask .popup-login .qq-login {
+	/*display: none;*/
+	text-align: center;
+}
+.mask .popup-login .qq-login a:hover {
+	/*border-bottom: 1px solid #424242;*/
+	text-decoration: underline;
+}
+/* 扫码快速安全登录 */
+.mask .popup-login .qq-login .QRcode-login {
+	/*display: none;*/
+}
+.mask .popup-login .qq-login .QRcode-login p {
+	/*text-align: center;*/
+}
+
+.mask .popup-login .qq-login .QRcode-login p:nth-child(1) {
+	font-size: 20px;
+	line-height: 3em;
+}
+.mask .popup-login .qq-login .QRcode-login p:nth-child(n + 2) {
+	color: #646464;
+}
+.mask .popup-login .qq-login .QRcode-login .qq-QRcode {
+	position: absolute;
+	top: 48%;
+	left: 37%;
+	width: 140px;
+	height: 140px;
+	background: url("images/qq_code.jpg")  no-repeat 0 0;
+	background-size: 100%;
+	border: 1px solid #c4c4c4;
+}
+.mask .popup-login .qq-login .QRcode-login .scan {
+	display: none;
+	position: absolute;
+	top: 40%;
+	left: 52%;/*37%;*/
+	width: 160px;
+	height: 200px;
+	background: url("images/scan.png")  no-repeat 0 0;
+	background-size: 100%;
+}
+
+/* 账户密码登录 */
+.mask .popup-login .qq-login .account-login {
+	text-align: center;
+	display: none;
+}
+.mask .popup-login .qq-login .account-login p {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color: #666;
+}
+.mask .popup-login .qq-login .account-login .title {
+	font-size: 20px;
+	margin-bottom: 0px;
+	color: #333;
+}
+.mask .popup-login .qq-login .account-login .form-group {
+	width: 280px;
+	/*background-color: red;*/
+	margin: 0 auto;
+	position: relative;
+}
+.mask .popup-login .qq-login .account-login .form-group span.clear-input {
+	display: none;
+	position: absolute;
+	width: 20.2px;
+	height: 20.2px;
+	background: url("images/tools_icon5.png") no-repeat;
+	background-position: -116.5px -160.6px;
+	background-size: 274px 697px;
+	top: 10.7px;
+	right: 18px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.mask .popup-login .qq-login .account-login .form-group span.clear-input:hover {
+	background-position: -139.5px -160.6px;
+}
+.mask .popup-login .qq-login .account-login .form-group input {
+	display: block;
+	padding: 12px;
+	margin: 8px auto;
+	outline: none;
+	border: 1px solid #ececec;
+}
+.mask .popup-login .qq-login .account-login .form-group input.input-box {
+	width: 240px;
+	height: 16px;
+	line-height: 16px;
+	border-radius: 5px;
+	/*outline-color: #4af;
+	outline-width: thin;*/
+}
+.form-group input.input-box::-webkit-input-placeholder {
+	color: #999; /*#ccc*/
+}
+.form-group input.focus::-webkit-input-placeholder {
+	color: #ccc;
+}
+.mask .popup-login .qq-login .account-login .form-group input.submit {
+	outline: none;
+	width: 242px;
+	height: 18px;
+	line-height: 18px;
+	border-color: #fff;
+	background-color: #86ce2f;
+	color: #fff;
+	box-sizing: content-box;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+
+/**/
+.mask .popup-login .qq-login .login-bottom {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	bottom: 10px;
+	/*border: 1px solid blue;*/
+}
+.mask .popup-login .qq-login .login-bottom .check {
+	position: absolute;
+	top: 1.5px;
+	left: 10px;
+	/*display: inline-block;*/
+	width: 17px;
+	height: 17px;
+	background: url("images/tools_icon5.png") no-repeat;
+	background-position: -75px -162.5px;/*-93px -162.5px;*/
+	background-size: 274px 697px;
+	/*float: left;*/
+	/*cursor: pointer;*/
+}
+.mask .popup-login .qq-login .login-bottom>li:nth-child(1) {
+	margin-left: 32px;
+	float: left;
+	cursor: pointer;
+}
+.mask .popup-login .qq-login .login-bottom>li:nth-child(2) {
+	float: right;
+	margin-right: 10px;
+}
+.mask .popup-login .qq-login .login-bottom>li:nth-child(2) ul li {
+	float: left;
+	padding: 0 5px;
+	color: #acacac;
+}
+.mask .popup-login .qq-login .login-bottom>li:nth-child(2) ul li a {
+	color: #424242;
+}
+/* 4.1.3 微信登录页面 */
+.mask .popup-login .wechat-login {
+	display: none;
+}
+/* 4.1.3 微信登录页面 */
+.mask .popup-login .wechat-login .wechat-QRcode {
+	position: absolute;
+	left: 200px;
+	top: 180px;
+	width: 160px;
+	height: 160px;
+	background: url("images/wechat_code.jpg") no-repeat 0 0;
+	background-size: 100%;
+	/*border: 1px solid green;*/
+}
+.mask .popup-login .wechat-login p {
+	text-align: center;
+	line-height: 2em;
+	font-size: 13px;
+}
+.mask .popup-login .wechat-login p:nth-child(2) {
+	margin-top: 220px;
+	color: #343434;
+}
+.mask .popup-login .wechat-login p:last-child {
+	color: #999;
+}
+
+/* 4.2 弹出设置页面 */
+.mask .popup-setting {
+	display: none;
+	width: 600px;
+	height: 360px;
+	top: 115px;
+	left: 340px;
+	background-color: #fff;
+	border: 1px solid #cdcdcd;
+	color: #424242;
+}
+/* 4.2.1 设置页面顶部栏 */
+.mask .popup-setting .setting-bar {
+	width: 100%;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	/*background-color: red;*/
+	position: relative;
+	border-bottom: 1px solid #efefef;
+}
+.mask .popup-setting .setting-bar a {
+	position: absolute;
+	width: 11.5px;
+	height: 11.5px;
+	top: 15px;
+	right: 15px;
+	background: url("images/tools_icon6.png") no-repeat;
+	background-position: 0px -200px;/*-93px -162.5px;*/
+	background-size: 50px 290px;
+}
+.mask .popup-setting .setting-bar a:hover {
+	background-position: -14px -200px;/*-93px -162.5px;*/
+}
+/* 设置页面的设置内容部分 */
+.mask .popup-setting .setting-content {
+	padding: 10px;
+	width: 90%;
+	height: 50%;
+	margin: 10px auto;
+	/*background-color: green;*/
+	font-size: 14px;
+}
+.mask .popup-setting .setting-content p {
+	height: 30px;
+	line-height: 30px;
+	/*background-color: red;*/
+	margin-top: 12px;
+}
+.mask .popup-setting .setting-content p:last-child {
+	color: #999;
+}
+/* 设置内容-历史播放列表 */
+.mask .popup-setting .setting-content .history-playlist input {
+	display: none;
+}
+.mask .popup-setting .setting-content .history-playlist label {
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	/*border: 1px solid red;*/
+}
+.mask .popup-setting .setting-content .history-playlist label::before {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border: 1px solid #999;
+	vertical-align: -2.5px;
+	margin-right: 10px;
+}
+.mask .popup-setting .setting-content .history-playlist input:checked + label::before {
+	content: "";
+	background: url("images/tools_icon1.png") no-repeat;
+	background-size: 200px 340px;
+	background-position: -60.5px -101px;
+	border-color: #31c27c;
+}
+/* 设置内容-播放设置 */
+.mask .popup-setting .setting-content .playing-setting {
+	position: relative;
+	/*border: 1px solid red;*/
+	width: 100%;
+	height: 60px;
+}
+.mask .popup-setting .setting-content .playing-setting div {
+	position: absolute;
+	width: 50%;
+	height: 30px;
+	line-height: 30px;
+	/*border: 1px solid blue;*/
+}
+.mask .popup-setting .setting-content .playing-setting div:nth-child(1) {
+	top: 0;
+	left: 0;
+}
+.mask .popup-setting .setting-content .playing-setting div:nth-child(1) span {
+	color: #999;
+}
+.mask .popup-setting .setting-content .playing-setting div:nth-child(2) {
+	top: 0;
+	left: 54%;
+}
+.mask .popup-setting .setting-content .playing-setting div:nth-child(3) {
+	top: 50%;
+	left: 0;
+}
+.mask .popup-setting .setting-content .playing-setting div>input {
+	display: none;
+}
+.mask .popup-setting .setting-content .playing-setting label {
+	display: inline-block;
+	height: 14px;
+	line-height: 14px;
+	/*border: 1px solid red;*/
+}
+.mask .popup-setting .setting-content .playing-setting div>label::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url("images/tools_icon1.png") no-repeat;
+	background-size: 200px 340px;
+	background-position: -180px -80px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: -2px;
+}
+.mask .popup-setting .setting-content .playing-setting div input:checked + label::before {
+	background-position: -180px -60px;
+}
+
+/* 设置页面底部按钮 */
+.mask .popup-setting .setting-btn {
+	margin-right: 30px;
+	margin-top: 40px;
+}
+.mask .popup-setting .setting-btn span {
+	float: right;
+	width: 120px;
+	height: 40px;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+.mask .popup-setting .setting-btn input {
+	font-size: 13.5px;
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+.mask .popup-setting .setting-btn span:first-child {
+	background-color: #31c27c;
+}
+.mask .popup-setting .setting-btn span:first-child input {
+	color: #fff;
+}
+.mask .popup-setting .setting-btn span:first-child input:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+.mask .popup-setting .setting-btn span:last-child {
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+.mask .popup-setting .setting-btn span:last-child input:hover {
+	background-color: #eee;
+}
+
+/* 4.3 弹出下载页面 */
+
+/* 4.4 弹出未选择歌曲页面 */
+.popup-not-selected {
+	display: none;
+	position: absolute;
+	width: 200px;
+	height: 140px;
+	border-radius: 3px;
+	background-color: rgba(0,0,0,.7);
+	top: 50%;
+	left: 50%;
+	margin: -70px 0 0 -100px;
+	color: #fff;
+	text-align: center;
+}
+.popup-not-selected span {
+	margin-top: 30px;
+	display: inline-block;
+	width: 47px;
+	height: 47px;
+	background: url("images/tools_icon6.png") no-repeat;
+	background-size: 50px 290px;
+	background-position: 0 -220px;
+}
+.popup-not-selected p {
+	margin-top: 12px;
+	font-size: 14px;
+}
